@@ -4,6 +4,7 @@ import './App.css';
 
 
 import Login from './login/Login';
+import Jokes from './jokes/Jokes';
 
 class App extends Component {
   render() {
@@ -15,11 +16,12 @@ class App extends Component {
             &nbsp; | &nbsp;
             <NavLink to="/login">Login</NavLink>
             &nbsp; | &nbsp;
-            <NavLink to="/users">Jokes</NavLink>
+            <NavLink to="/jokes">Jokes</NavLink>
           </nav>
         </header>
         <main>
           <Route path="/login" component={ Login } />
+          <Route path="/jokes" component={ Jokes } />
 
         </main>
       </div>
