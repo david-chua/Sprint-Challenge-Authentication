@@ -5,6 +5,7 @@ import './App.css';
 
 import Login from './login/Login';
 import Jokes from './jokes/Jokes';
+import Register from './register/Register';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
           </nav>
         </header>
         <main>
+          <Route path="/register" component={ Register } />
           <Route path="/login" component={ Login } />
           <Route path="/jokes" component={ Jokes } />
 

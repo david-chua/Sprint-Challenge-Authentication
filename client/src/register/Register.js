@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-class Login extends React.Component{
+class Register extends React.Component{
   constructor(props){
     super(props)
     this.state = {
@@ -17,13 +17,12 @@ class Login extends React.Component{
 
   handleSubmit = e => {
     e.preventDefault();
-    const endpoint = 'http://localhost:3300/api/login';
+    const endpoint = 'http://localhost:3300/api/register';
 
     axios.post(endpoint, this.state)
       .then(res => {
-        localStorage.setItem('jwt', res.data.token)
-        console.log('response data', res.data)
-        this.props.history.push('/jokes')
+        console.log('response data', res)
+        this.props.history.push('/login')
       })
       .catch(err => {
         console.log(err);
@@ -62,4 +61,4 @@ class Login extends React.Component{
     }
 }
 
-export default Login;
+export default Register;
